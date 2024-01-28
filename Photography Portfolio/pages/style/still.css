@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald';
+    background-color: black;
+}
+
+.point {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    animation: transitionIn 1s;
+}
+
+.point a {
+    font-style: 'Oswald';
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.point a:hover {
+    color: gray;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+.row::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX('-10deg');
+    }
+    to {
+        opacity: 1;
+        transform: rotateX('0');
+    }
+}
